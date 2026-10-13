@@ -20,6 +20,9 @@ A small playground for experimenting with public-key cryptography.
     └── rsa_keypair_demo.js
 ├── java-example/
     └── RsaKeypairDemo.java
+└── c-example/
+    ├── CMakeLists.txt
+    └── rsa_keypair_demo.c
 ```
 
 ## RSA key pair
@@ -98,3 +101,18 @@ Compile and run it from the project root:
 javac java-example/RsaKeypairDemo.java
 java -cp java-example RsaKeypairDemo
 ```
+
+## C example
+
+The C example uses OpenSSL's EVP API to perform RSA signing, verification,
+encryption, and decryption with the same key pair.
+
+Build and run it from the project root:
+
+```bash
+cmake -S c-example -B c-example/build
+cmake --build c-example/build
+./c-example/build/rsa_keypair_demo
+```
+
+OpenSSL development files and CMake are required.
