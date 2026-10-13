@@ -15,9 +15,11 @@ A small playground for experimenting with public-key cryptography.
 ├── cpp-example/
     ├── CMakeLists.txt
     └── rsa_keypair_demo.cpp
-└── javascript-example/
+├── javascript-example/
     ├── package.json
     └── rsa_keypair_demo.js
+├── java-example/
+    └── RsaKeypairDemo.java
 ```
 
 ## RSA key pair
@@ -82,4 +84,17 @@ Or run it through the npm script:
 
 ```bash
 npm --prefix javascript-example start
+```
+
+## Java example
+
+The Java example uses the standard JCA/JCE APIs to load the PEM keys and
+perform RSA signing, verification, encryption, and decryption without
+external dependencies.
+
+Compile and run it from the project root:
+
+```bash
+javac java-example/RsaKeypairDemo.java
+java -cp java-example RsaKeypairDemo
 ```
