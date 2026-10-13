@@ -7,7 +7,6 @@ A small playground for experimenting with public-key cryptography.
 ```text
 .
 ├── keys/
-│   ├── private_key.pem
 │   └── public_key.pem
 ├── python-example/
     ├── requirements.txt
@@ -29,18 +28,16 @@ A small playground for experimenting with public-key cryptography.
 
 The `keys/` directory contains a 4096-bit RSA key pair in PEM format:
 
-- `private_key.pem`: RSA private key
 - `public_key.pem`: RSA public key
 
-These keys are intended for local experimentation only. Do not use them in
-production or share the private key.
+The key pair is intended for local experimentation only.
 
 ## Python example
 
 The Python example uses the `cryptography` package to demonstrate:
 
-- Signing with the private key and verifying with the public key
-- Encrypting with the public key and decrypting with the private key
+- Signing and verification
+- Encryption and decryption
 
 Install the dependency and run the example from the project root:
 
