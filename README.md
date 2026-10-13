@@ -12,9 +12,12 @@ A small playground for experimenting with public-key cryptography.
 ├── python-example/
     ├── requirements.txt
     └── rsa_keypair_demo.py
-└── cpp-example/
+├── cpp-example/
     ├── CMakeLists.txt
     └── rsa_keypair_demo.cpp
+└── javascript-example/
+    ├── package.json
+    └── rsa_keypair_demo.js
 ```
 
 ## RSA key pair
@@ -62,3 +65,21 @@ cmake --build cpp-example/build
 ```
 
 OpenSSL development files and CMake are required.
+
+## JavaScript example
+
+The JavaScript example uses Node.js's built-in `crypto` module to perform
+RSA signing, verification, encryption, and decryption without external npm
+dependencies.
+
+Run it from the project root:
+
+```bash
+node javascript-example/rsa_keypair_demo.js
+```
+
+Or run it through the npm script:
+
+```bash
+npm --prefix javascript-example start
+```

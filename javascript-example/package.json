@@ -1,0 +1,9 @@
+{
+  "name": "rsa-keypair-demo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "RSA key pair signing and encryption example",
+  "scripts": {
+    "start": "node rsa_keypair_demo.js"
+  }
+}
