@@ -9,9 +9,12 @@ A small playground for experimenting with public-key cryptography.
 ├── keys/
 │   ├── private_key.pem
 │   └── public_key.pem
-└── python-example/
+├── python-example/
     ├── requirements.txt
     └── rsa_keypair_demo.py
+└── cpp-example/
+    ├── CMakeLists.txt
+    └── rsa_keypair_demo.cpp
 ```
 
 ## RSA key pair
@@ -44,3 +47,18 @@ Expected output:
 Signature verification: PASS
 Encryption/decryption: PASS
 ```
+
+## C++ example
+
+The C++ example uses OpenSSL's EVP API and performs the same signing,
+verification, encryption, and decryption checks.
+
+Build and run it from the project root:
+
+```bash
+cmake -S cpp-example -B cpp-example/build
+cmake --build cpp-example/build
+./cpp-example/build/rsa_keypair_demo
+```
+
+OpenSSL development files and CMake are required.
